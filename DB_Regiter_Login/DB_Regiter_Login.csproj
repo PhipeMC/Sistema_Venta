@@ -116,6 +116,7 @@
   <ItemGroup>
     <Compile Include="BackEnd\Categoria.cs" />
     <Compile Include="BackEnd\Cliente.cs" />
+    <Compile Include="BackEnd\DetalleVenta.cs" />
     <Compile Include="BackEnd\Empleado.cs" />
     <Compile Include="BackEnd\Producto.cs" />
     <Compile Include="BackEnd\Proveedor.cs" />
