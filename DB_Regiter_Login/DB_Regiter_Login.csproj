@@ -114,6 +114,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackEnd\Categoria.cs" />
+    <Compile Include="BackEnd\Cliente.cs" />
+    <Compile Include="BackEnd\Empleado.cs" />
+    <Compile Include="BackEnd\Producto.cs" />
+    <Compile Include="BackEnd\Proveedor.cs" />
+    <Compile Include="BackEnd\Venta.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FrontEnd\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
