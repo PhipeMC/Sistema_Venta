@@ -66,3 +66,4 @@ C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Lo
 C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CopyComplete
 C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
 C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.Cliente.resources
