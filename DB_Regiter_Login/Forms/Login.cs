@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DB_Regiter_Login.Forms;
 using DB_Regiter_Login.MySQL;
 
 namespace DB_Regiter_Login
@@ -94,8 +95,9 @@ namespace DB_Regiter_Login
             {
                 if (Connection.Check(txt_nickname.Text, txt_password.Text))
                 {
-                    ///
-                    MessageBox.Show("Ingresando..");
+                    Cliente FrmCliente = new Cliente(this);
+                    FrmCliente.Visible = true;
+                    this.Visible = false;
                 }
                 else {
                     throw new Exception();

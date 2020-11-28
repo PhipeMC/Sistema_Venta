@@ -32,3 +32,38 @@ C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Reg
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csprojAssemblyReference.cache
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\DB_Regiter_Login.exe.config
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\DB_Regiter_Login.exe
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\DB_Regiter_Login.pdb
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\Google.Protobuf.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\MySql.Data.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\Renci.SshNet.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Buffers.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Memory.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\Zstandard.Net.dll
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\Google.Protobuf.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\MySql.Data.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\Renci.SshNet.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Buffers.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Memory.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csprojAssemblyReference.cache
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Form1.resources
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Properties.Resources.resources
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.GenerateResource.cache
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CoreCompileInputs.cache
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CopyComplete
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
+C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.Cliente.resources

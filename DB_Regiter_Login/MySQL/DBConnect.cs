@@ -209,7 +209,6 @@ namespace DB_Regiter_Login.MySQL
         public bool Check(String nickname, String password)
         {
             string query = String.Format("select usuario,contrasenia from empleados where usuario = '{0}' and contrasenia = '{1}'", nickname, password);
-            //MessageBox.Show(String.Format("{0}\n{1}", nickname, password));
 
             //Create a list to store the result
             List<string>[] list = new List<string>[2];
@@ -470,6 +469,56 @@ namespace DB_Regiter_Login.MySQL
                 this.CloseConnection();
             }
             return list;
+        }
+
+        /// <summary>
+        /// Consulta para obtener los proveedores de la BD
+        /// </summary>
+        /// <returns>
+        /// Regresa un Array de List<String> donde cada lista es una columna de la tabla 
+        /// en la base de datos
+        /// </returns>
+        public List<string>[] SelectProveedores()
+        {
+            string query = "SELECT * FROM proveedores";
+
+            //Create a list to store the result
+            List<string>[] list = new List<string>[4];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["idProveedor"] + "");
+                    list[1].Add(dataReader["nombreCompleto"] + "");
+                    list[2].Add(dataReader["direccion"] + "");
+                    list[3].Add(dataReader["telefono"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
         }
     }
 }
