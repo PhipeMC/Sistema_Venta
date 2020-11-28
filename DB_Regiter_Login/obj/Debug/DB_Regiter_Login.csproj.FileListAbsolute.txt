@@ -25,7 +25,6 @@ C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\bin\Debug\System
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Form1.resources
-C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.Program_Data.resources
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Properties.Resources.resources
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.GenerateResource.cache
 C:\Users\PhipeMC\source\repos\DB_Regiter_Login\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CoreCompileInputs.cache

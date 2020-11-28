@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DB_Regiter_Login.Forms;
 using DB_Regiter_Login.MySQL;
 
 namespace DB_Regiter_Login
@@ -15,7 +14,6 @@ namespace DB_Regiter_Login
     public partial class Form1 : Form
     {
         private static DBConnect Connection = new DBConnect();
-        private bool register = false;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +22,6 @@ namespace DB_Regiter_Login
         private void Form1_Load(object sender, EventArgs e)
         {
             pic_logo.Location = new Point(this.Width/2 - 50,50);
-            showControls(false);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -53,10 +50,6 @@ namespace DB_Regiter_Login
                 pic_password.Image = Properties.Resources.password_48px;
                 panel_password.BackColor = Color.FromArgb(240, 240, 240);
                 txt_password.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
             }
             else {
                 pic_user.Image = Properties.Resources.male_user_48px_selected;
@@ -66,10 +59,6 @@ namespace DB_Regiter_Login
                 pic_password.Image = Properties.Resources.password_48px;
                 panel_password.BackColor = Color.FromArgb(240, 240, 240);
                 txt_password.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
             }
         }
         private void txt_password_Click(object sender, EventArgs e)
@@ -85,10 +74,6 @@ namespace DB_Regiter_Login
                 pic_user.Image = Properties.Resources.male_user_48px;
                 panel_nick.BackColor = Color.FromArgb(240, 240, 240);
                 txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
             }
             else {
                 txt_password.PasswordChar = '*';
@@ -99,45 +84,9 @@ namespace DB_Regiter_Login
                 pic_user.Image = Properties.Resources.male_user_48px;
                 panel_nick.BackColor = Color.FromArgb(240, 240, 240);
                 txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
             }
         }
 
-        private void txt_email_Click(object sender, EventArgs e)
-        {
-            if (txt_email.Text.Equals("Email"))
-            {
-                txt_email.Clear();
-                pic_email.Image = Properties.Resources.email_48px_selected;
-                panel_email.BackColor = Color.FromArgb(4, 95, 159);
-                txt_email.ForeColor = Color.FromArgb(4, 95, 159);
-
-                pic_password.Image = Properties.Resources.password_48px;
-                panel_password.BackColor = Color.FromArgb(240, 240, 240);
-                txt_password.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_user.Image = Properties.Resources.male_user_48px;
-                panel_nick.BackColor = Color.FromArgb(240, 240, 240);
-                txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-            }
-            else
-            {
-                pic_email.Image = Properties.Resources.email_48px_selected;
-                panel_email.BackColor = Color.FromArgb(4, 95, 159);
-                txt_email.ForeColor = Color.FromArgb(4, 95, 159);
-
-                pic_password.Image = Properties.Resources.password_48px;
-                panel_password.BackColor = Color.FromArgb(240, 240, 240);
-                txt_password.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_user.Image = Properties.Resources.male_user_48px;
-                panel_nick.BackColor = Color.FromArgb(240, 240, 240);
-                txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-            }
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -145,9 +94,8 @@ namespace DB_Regiter_Login
             {
                 if (Connection.Check(txt_nickname.Text, txt_password.Text))
                 {
-                    Program_Data Main = new Program_Data(Connection.getID(txt_nickname.Text), this);
-                    Main.Visible = true;
-                    this.Visible = false;
+                    ///
+                    MessageBox.Show("Ingresando..");
                 }
                 else {
                     throw new Exception();
@@ -158,7 +106,12 @@ namespace DB_Regiter_Login
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Codigo para el registro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /*private void button2_Click(object sender, EventArgs e)
         {
             if (!this.register)
             {
@@ -186,7 +139,7 @@ namespace DB_Regiter_Login
                     }
                 }
             }
-        }
+        }*/
 
         private void txt_nickname_Enter(object sender, EventArgs e)
         {
@@ -200,10 +153,6 @@ namespace DB_Regiter_Login
                 pic_password.Image = Properties.Resources.password_48px;
                 panel_password.BackColor = Color.FromArgb(240, 240, 240);
                 txt_password.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
             }
             else
             {
@@ -214,10 +163,6 @@ namespace DB_Regiter_Login
                 pic_password.Image = Properties.Resources.password_48px;
                 panel_password.BackColor = Color.FromArgb(240, 240, 240);
                 txt_password.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
             }
         }
 
@@ -234,10 +179,6 @@ namespace DB_Regiter_Login
                 pic_user.Image = Properties.Resources.male_user_48px;
                 panel_nick.BackColor = Color.FromArgb(240, 240, 240);
                 txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
             }
             else
             {
@@ -249,43 +190,6 @@ namespace DB_Regiter_Login
                 pic_user.Image = Properties.Resources.male_user_48px;
                 panel_nick.BackColor = Color.FromArgb(240, 240, 240);
                 txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_email.Image = Properties.Resources.email_48px;
-                panel_email.BackColor = Color.FromArgb(240, 240, 240);
-                txt_email.ForeColor = Color.FromArgb(240, 240, 240);
-            }
-        }
-
-        private void txt_email_Enter(object sender, EventArgs e)
-        {
-            if (txt_email.Text.Equals("Email"))
-            {
-                txt_email.Clear();
-                pic_email.Image = Properties.Resources.email_48px_selected;
-                panel_email.BackColor = Color.FromArgb(4, 95, 159);
-                txt_email.ForeColor = Color.FromArgb(4, 95, 159);
-
-                pic_user.Image = Properties.Resources.male_user_48px;
-                panel_nick.BackColor = Color.FromArgb(240, 240, 240);
-                txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_password.Image = Properties.Resources.password_48px;
-                panel_password.BackColor = Color.FromArgb(240, 240, 240);
-                txt_password.ForeColor = Color.FromArgb(240, 240, 240);
-            }
-            else
-            {
-                pic_email.Image = Properties.Resources.email_48px_selected;
-                panel_email.BackColor = Color.FromArgb(4, 95, 159);
-                txt_email.ForeColor = Color.FromArgb(4, 95, 159);
-
-                pic_user.Image = Properties.Resources.male_user_48px;
-                panel_nick.BackColor = Color.FromArgb(240, 240, 240);
-                txt_nickname.ForeColor = Color.FromArgb(240, 240, 240);
-
-                pic_password.Image = Properties.Resources.password_48px;
-                panel_password.BackColor = Color.FromArgb(240, 240, 240);
-                txt_password.ForeColor = Color.FromArgb(240, 240, 240);
             }
         }
 
@@ -319,26 +223,9 @@ namespace DB_Regiter_Login
             this.Close();
         }
 
-        private void showControls(Boolean register) {
-            if (!register)
-            {
-                pic_email.Visible = false;
-                panel_email.Visible = false;
-                txt_email.Visible = false;
-                this.register = false;
-            }
-            else {
-                pic_email.Visible = true;
-                panel_email.Visible = true;
-                txt_email.Visible = true;
-            }
-        }
-
         private void cleanRegister() {
             txt_nickname.Clear();
             txt_password.Clear();
-            txt_email.Clear();
-            showControls(false);
         }
     }
 }

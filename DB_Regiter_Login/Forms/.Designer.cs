@@ -34,18 +34,13 @@
             this.txt_password = new System.Windows.Forms.TextBox();
             this.panel_password = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel_close = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel_email = new System.Windows.Forms.Panel();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.pic_email = new System.Windows.Forms.PictureBox();
             this.pic_password = new System.Windows.Forms.PictureBox();
             this.pic_user = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.panel_close.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_email)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -110,21 +105,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Help;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(24, 536);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(375, 45);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Registarse";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel_close
             // 
             this.panel_close.Controls.Add(this.pictureBox1);
@@ -148,38 +128,6 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            // 
-            // panel_email
-            // 
-            this.panel_email.BackColor = System.Drawing.Color.White;
-            this.panel_email.Location = new System.Drawing.Point(24, 401);
-            this.panel_email.Name = "panel_email";
-            this.panel_email.Size = new System.Drawing.Size(375, 1);
-            this.panel_email.TabIndex = 13;
-            // 
-            // txt_email
-            // 
-            this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_email.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.ForeColor = System.Drawing.Color.White;
-            this.txt_email.Location = new System.Drawing.Point(66, 368);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(336, 25);
-            this.txt_email.TabIndex = 6;
-            this.txt_email.Text = "Email";
-            this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
-            this.txt_email.Enter += new System.EventHandler(this.txt_email_Enter);
-            // 
-            // pic_email
-            // 
-            this.pic_email.Image = global::DB_Regiter_Login.Properties.Resources.email_48px;
-            this.pic_email.Location = new System.Drawing.Point(24, 363);
-            this.pic_email.Name = "pic_email";
-            this.pic_email.Size = new System.Drawing.Size(32, 32);
-            this.pic_email.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_email.TabIndex = 11;
-            this.pic_email.TabStop = false;
             // 
             // pic_password
             // 
@@ -219,11 +167,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(434, 619);
-            this.Controls.Add(this.panel_email);
-            this.Controls.Add(this.txt_email);
-            this.Controls.Add(this.pic_email);
             this.Controls.Add(this.panel_close);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_password);
             this.Controls.Add(this.txt_password);
@@ -243,7 +187,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_close.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_email)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
@@ -262,12 +205,8 @@
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Panel panel_password;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel_close;
-        private System.Windows.Forms.Panel panel_email;
-        private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.PictureBox pic_email;
     }
 }
 

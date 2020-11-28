@@ -26,14 +26,13 @@ namespace DB_Regiter_Login.MySQL
         private void Initialize()
         {
             server = "localhost";
-            database = "projectUsers";
-            uid = "userRoot";
-            password = "DBprojectC#";
-            string connectionString;
+            database = "tiendita";
+            uid = "root";
+            password = "root";
+            /*string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
+            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";*/
+            connection = new MySqlConnection(String.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3}", server, database, uid, password));
         }
 
         //open connection to database
@@ -209,7 +208,7 @@ namespace DB_Regiter_Login.MySQL
         //Verificar usuario registrado
         public bool Check(String nickname, String password)
         {
-            string query = String.Format("SELECT nickname,password FROM userData where nickname = '{0}' and password = md5('{1}')", nickname, password);
+            string query = String.Format("select usuario,contrasenia from empleados where usuario = '{0}' and contrasenia = '{1}'", nickname, password);
             //MessageBox.Show(String.Format("{0}\n{1}", nickname, password));
 
             //Create a list to store the result
@@ -228,8 +227,8 @@ namespace DB_Regiter_Login.MySQL
                  //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    list[0].Add(dataReader["nickname"] + "");
-                    list[1].Add(dataReader["password"] + "");
+                    list[0].Add(dataReader["usuario"] + "");
+                    list[1].Add(dataReader["contrasenia"] + "");
                 }
 
                 //close Data Reader
