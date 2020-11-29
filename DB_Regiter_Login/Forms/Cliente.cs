@@ -31,19 +31,27 @@ namespace DB_Regiter_Login.Forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        /// <summary>
+        /// Llena la tabla de los clientes al iniciar
+        /// </summary>
+        private void fill_Table() {
             DataTable table = new DataTable();
             table.Columns.Add("ID", typeof(String));
             table.Columns.Add("Nombre", typeof(String));
+            table.Columns.Add("RFC", typeof(String));
             table.Columns.Add("Direccion", typeof(String));
             table.Columns.Add("Telefono", typeof(String));
-            List<String>[] proveedores = Connection.SelectProveedores();
-            foreach (String str in proveedores[])
+            List<String>[] clientes = Connection.SelectClientes();
+            for (int i = 0; i < clientes[0].Count(); i++)
             {
-                table.Rows.Add(str);
+                table.Rows.Add(clientes[0][i],clientes[1][i],clientes[2][i],clientes[3][i],clientes[4][i]);
             }
             dataGridView1.DataSource = table;
+        }
+
+        private void Cliente_Load(object sender, EventArgs e)
+        {
+            fill_Table();
         }
     }
 }
