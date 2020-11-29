@@ -67,3 +67,41 @@ C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Lo
 C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
 C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
 C:\Users\PhipeMC\Documents\C# Proyecto\ProyectoFinal\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.Cliente.resources
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\DB_Regiter_Login.exe.config
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\DB_Regiter_Login.exe
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\DB_Regiter_Login.pdb
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\BouncyCastle.Crypto.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\Google.Protobuf.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Hash.xxHash.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\MySql.Data.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\Renci.SshNet.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Buffers.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Memory.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Numerics.Vectors.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\Ubiety.Dns.Core.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\Zstandard.Net.dll
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\Google.Protobuf.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\K4os.Hash.xxHash.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\MySql.Data.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\Renci.SshNet.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Buffers.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Memory.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Numerics.Vectors.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csprojAssemblyReference.cache
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.FrontEnd.Forms.Admin.resources
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.Cliente.resources
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.FrmEmpleados.resources
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Form1.resources
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.FrontEnd.Forms.Menu.resources
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Properties.Resources.resources
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.GenerateResource.cache
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CoreCompileInputs.cache
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CopyComplete
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
