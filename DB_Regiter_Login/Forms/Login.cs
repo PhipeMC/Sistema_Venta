@@ -95,9 +95,13 @@ namespace DB_Regiter_Login
             {
                 if (Connection.Check(txt_nickname.Text, txt_password.Text))
                 {
-                    Cliente FrmCliente = new Cliente(this);
-                    FrmCliente.Visible = true;
+                    //Connection.Check(txt_nickname.Text, txt_password.Text)
+                    //Cliente FrmCliente = new Cliente(this);
+                    //FrmCliente.Visible = true;
+                    //this.Visible = false;
+                    Forms.Menu main = new Forms.Menu();
                     this.Visible = false;
+                    main.Visible = true;
                 }
                 else {
                     throw new Exception();

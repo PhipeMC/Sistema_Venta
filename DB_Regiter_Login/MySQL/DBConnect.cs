@@ -12,6 +12,7 @@ namespace DB_Regiter_Login.MySQL
     {
         private MySqlConnection connection;
         private string server;
+        private string port;
         private string database;
         private string uid;
         private string password;
@@ -29,6 +30,7 @@ namespace DB_Regiter_Login.MySQL
             database = "tiendita";
             uid = "root";
             password = "root";
+            port = "3307";
             /*string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";*/
