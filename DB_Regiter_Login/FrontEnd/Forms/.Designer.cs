@@ -81,6 +81,7 @@
             this.txt_password.Text = "Contraseña";
             this.txt_password.Click += new System.EventHandler(this.txt_password_Click);
             this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
+            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             // 
             // panel_password
             // 
