@@ -15,6 +15,7 @@ namespace DB_Regiter_Login.MySQL
         private string database;
         private string uid;
         private string password;
+        private string port;
 
         //Constructor
         public DBConnect()
@@ -26,12 +27,14 @@ namespace DB_Regiter_Login.MySQL
         private void Initialize()
         {
             server = "localhost";
+            //port = "3307";
             database = "tiendita";
             uid = "root";
             password = "root";
             /*string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";*/
+            //connection = new MySqlConnection(String.Format("SERVER={0};PORT={1};DATABASE={2};UID={3};PASSWORD={4}", server, port, database, uid, password));
             connection = new MySqlConnection(String.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3}", server, database, uid, password));
         }
 
@@ -560,6 +563,138 @@ namespace DB_Regiter_Login.MySQL
                 //close Data Reader
                 dataReader.Close();
 
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+        public string CrearVenta(string fecha, string empleado, string cliente)
+        {
+            string res = "";
+            try
+            {
+                
+                //Registrar una venta nueva
+                string query = String.Format("insert into `ventas` values (null,'{0}','{1}','{2}');", fecha, empleado, cliente);
+                string query2 = String.Format("select MAX(idVenta) from ventas;");
+                if (this.OpenConnection() == true)
+                {
+                    //create command and assign the query and connection from the constructor
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    
+                    //Executamos el comando
+                    cmd.ExecuteNonQuery();
+                    MySqlCommand cmd2 = new MySqlCommand(query2, connection);
+                    MySqlDataReader dataReader = cmd2.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        res = dataReader["MAX(idVenta)"].ToString();
+                    }
+                    //Cerrar la conexión
+                    this.CloseConnection();
+                    return res;
+                }
+                else
+                {
+                    return res;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return res;
+            }
+            
+        }
+        public void InsertarVenta(string cantidad, string descuento, string producto)
+        {
+            try
+            {
+                string sele = "select MAX(idVenta) as id from ventas;";
+                string pro = String.Format("select MAX(idProducto) as idP, precio from productos where nombre='{0}';", producto);
+
+
+                if (this.OpenConnection() == true)
+                {
+                    //creamos el comando y el reader
+                    MySqlCommand cmdS = new MySqlCommand(sele, connection);
+                    MySqlCommand cmdP = new MySqlCommand(pro, connection);
+                    MySqlDataReader dataReader = cmdS.ExecuteReader();
+                    List<string>[] list = new List<string>[1];
+                    List<string>[] listpro = new List<string>[2];
+                    list[0] = new List<string>();
+                    listpro[0] = new List<string>();
+                    listpro[1] = new List<string>();
+                    while (dataReader.Read())
+                    {
+                        //añadimos el valor obtenido al list
+                        list[0].Add(dataReader["id"] + "");
+
+                    }
+                    dataReader.Close();
+                    MySqlDataReader dataReaderP = cmdP.ExecuteReader();
+                    while (dataReaderP.Read())
+                    {
+                        listpro[0].Add(dataReaderP["idP"] + "");
+                        listpro[1].Add(dataReaderP["precio"] + "");
+                    }
+                    //Cerrar readers
+                    dataReaderP.Close();
+                    //registramos un detalle más a la venta
+                    string query = String.Format("insert into `detallesventa` values ('{0}','{1}','{2}','{3}','{4}');", listpro[1][0].ToString(), cantidad, descuento, list[0][0].ToString(),listpro[0][0].ToString());
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    //Executamos el comando
+                    cmd.ExecuteNonQuery();
+
+                    //Cerrar la conexión
+                    this.CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public List<string>[] SelectVenta(string producto)
+        {
+            string pro = String.Format("select MAX(idProducto) from productos where nombre='{0}';", producto);
+
+            List<string>[] listpro = new List<string>[1];
+            listpro[0] = new List<string>();
+            List<string>[] list = new List<string>[3];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            if (this.OpenConnection() == true)
+            {
+                //Create Command               
+                MySqlCommand cmdP = new MySqlCommand(pro, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReaderP = cmdP.ExecuteReader();
+                //Read the data and store them in the list
+                while (dataReaderP.Read())
+                {
+                    listpro[0].Add(dataReaderP["MAX(idProducto)"] + "");
+                }
+                dataReaderP.Close();
+                string query = String.Format("select precioXUnidad, MAX(IDVenta), IDProducto from detallesventa where idProducto = '{0}';", listpro[0][0]);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["precioXUnidad"] + "");
+                    list[1].Add(dataReader["MAX(IDVenta)"]+ "");
+                    list[2].Add(dataReader["IDProducto"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
                 //close Connection
                 this.CloseConnection();
 

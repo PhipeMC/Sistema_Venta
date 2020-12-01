@@ -19,7 +19,9 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnCajero_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ingresando..");
+            Venta vent = new Venta();
+            this.Visible = false;
+            vent.Visible = true;
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)

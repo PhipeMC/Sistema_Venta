@@ -105,3 +105,4 @@ D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regit
 D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CopyComplete
 D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
 D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
+D:\ITSUR\5to\BD\ProyectoTienda\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.FrontEnd.Forms.Venta.resources
