@@ -15,11 +15,41 @@ namespace DB_Regiter_Login.Forms
         public FrmEmpleados()
         {
             InitializeComponent();
+            
         }
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void checkDireccion_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (checkDireccion.Checked)
+            {
+                txtDireccion.Enabled = true;
+            }
+            else
+            {
+                txtDireccion.Enabled = false;
+            }
+        }
+
+        private void checkTel_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (checkTel.Checked)
+            {
+                txtTel.Enabled = true;
+            }
+            else
+            {
+                txtTel.Enabled = false;
+            }
         }
     }
 }
