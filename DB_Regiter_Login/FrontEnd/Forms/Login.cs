@@ -91,22 +91,7 @@ namespace DB_Regiter_Login
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                if (Connection.Check(txt_nickname.Text, txt_password.Text))
-                {
-                    //Connection.Check(txt_nickname.Text, txt_password.Text)
-                    FrontEnd.Forms.Menu FrmCliente = new FrontEnd.Forms.Menu();
-                    FrmCliente.Visible = true;
-                    this.Visible = false;
-                }
-                else {
-                    throw new Exception();
-                }
-            }
-            catch (Exception) {
-                MessageBox.Show("Verifica nuevamente los datos","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
+            Check_Login();
         }
 
         /// <summary>
@@ -226,9 +211,36 @@ namespace DB_Regiter_Login
             this.Close();
         }
 
-        private void cleanRegister() {
-            txt_nickname.Clear();
-            txt_password.Clear();
+        /// <summary>
+        /// Metodo para hacer la conexion con la BD y verificar si es el usario correcto
+        /// </summary>
+        private void Check_Login() {
+            try
+            {
+                if (Connection.Check(txt_nickname.Text, txt_password.Text))
+                {
+                    FrontEnd.Forms.Menu FrmCliente = new FrontEnd.Forms.Menu();
+                    FrmCliente.Visible = true;
+                    this.Visible = false;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Verifica nuevamente los datos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txt_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar) {
+                case '\r':
+                    Check_Login();
+                    break;
+            }
         }
     }
 }

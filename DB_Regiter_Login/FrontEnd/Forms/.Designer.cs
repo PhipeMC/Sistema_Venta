@@ -81,6 +81,7 @@
             this.txt_password.Text = "Contraseña";
             this.txt_password.Click += new System.EventHandler(this.txt_password_Click);
             this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
+            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             // 
             // panel_password
             // 
@@ -151,7 +152,7 @@
             // 
             // pic_logo
             // 
-            this.pic_logo.Image = ((System.Drawing.Image)(resources.GetObject("pic_logo.Image")));
+            this.pic_logo.Image = global::DB_Regiter_Login.Properties.Resources.shopping_96px;
             this.pic_logo.Location = new System.Drawing.Point(179, 12);
             this.pic_logo.Name = "pic_logo";
             this.pic_logo.Size = new System.Drawing.Size(100, 100);

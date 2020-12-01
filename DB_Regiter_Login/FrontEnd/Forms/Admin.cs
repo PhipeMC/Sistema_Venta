@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DB_Regiter_Login.Forms;
 
 namespace DB_Regiter_Login.FrontEnd.Forms
 {
@@ -19,7 +20,10 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ingresando..");
+            Cliente cl = new Cliente();
+            //MessageBox.Show("Ingresando..");
+            cl.Visible = true;
+            this.Visible = false;
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)

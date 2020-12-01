@@ -63,6 +63,16 @@ namespace DB_Regiter_Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_48px {
+            get {
+                object obj = ResourceManager.GetObject("back_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_login {
             get {
                 object obj = ResourceManager.GetObject("background_login", resourceCulture);
@@ -133,6 +143,16 @@ namespace DB_Regiter_Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap male_user__gray_48px {
+            get {
+                object obj = ResourceManager.GetObject("male_user__gray_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap male_user_48px {
             get {
                 object obj = ResourceManager.GetObject("male_user_48px", resourceCulture);
@@ -176,6 +196,26 @@ namespace DB_Regiter_Login.Properties {
         internal static System.Drawing.Bitmap password_48px_selected {
             get {
                 object obj = ResourceManager.GetObject("password_48px_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_48px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_96px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
