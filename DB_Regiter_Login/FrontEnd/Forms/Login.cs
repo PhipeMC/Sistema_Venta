@@ -211,11 +211,6 @@ namespace DB_Regiter_Login
             this.Close();
         }
 
-        private void cleanRegister() {
-            txt_nickname.Clear();
-            txt_password.Clear();
-        }
-
         /// <summary>
         /// Metodo para hacer la conexion con la BD y verificar si es el usario correcto
         /// </summary>
@@ -246,7 +241,6 @@ namespace DB_Regiter_Login
                     Check_Login();
                     break;
             }
-            //Check_Login();
         }
     }
 }

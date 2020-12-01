@@ -202,6 +202,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_workspace.ico" />
+    <None Include="Resources\male_user__gray_48px.png" />
+    <None Include="Resources\back_48px.png" />
+    <None Include="Resources\shopping_96px.png" />
+    <None Include="Resources\shopping_48px.png" />
     <None Include="Resources\minus_48px.png" />
     <None Include="Resources\user_96px.png" />
     <None Include="Resources\icons8_chat.ico" />

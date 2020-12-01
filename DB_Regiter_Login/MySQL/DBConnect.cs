@@ -571,5 +571,124 @@ namespace DB_Regiter_Login.MySQL
                 return list;
             }
         }
+
+        public int get_Last_ID_Client()
+        {
+            string query = "select idcliente from clientes order by idcliente desc; ";
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list.Add(dataReader["idCliente"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+            }
+            return Convert.ToInt32(list[0])+1;
+        }
+
+        public List<string>[] SelectClientes(String ID)
+        {
+            string query = String.Format("Select * from clientes where idcliente={0}",ID);
+
+            //Create a list to store the result
+            List<string>[] list = new List<string>[5];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+            list[4] = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["idCliente"] + "");
+                    list[1].Add(dataReader["nombre"] + "");
+                    list[2].Add(dataReader["RFC"] + "");
+                    list[3].Add(dataReader["direccion"] + "");
+                    list[4].Add(dataReader["telefono"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
+        public void add_Client(int id, String nombre, String direccion, String telefono, String RFC)
+        {
+            //Registrar usuarios en la base de datos
+            string query = String.Format("insert into clientes value({0},'{1}','{2}','{3}','{4}')", id.ToString(), nombre, RFC, direccion, telefono);
+
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+
+        //Update statement
+        public void update_Client(int id, String nombre, String direccion, String telefono, String RFC)
+        {
+            string query = String.Format("update clientes set nombre='{0}', direccion='{1}', telefono='{2}', RFC='{3}' where idcliente={4}",nombre,direccion,telefono,RFC,id);
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //create mysql command
+                MySqlCommand cmd = new MySqlCommand();
+                //Assign the query using CommandText
+                cmd.CommandText = query;
+                //Assign the connection using Connection
+                cmd.Connection = connection;
+
+                //Execute query
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
     }
 }
