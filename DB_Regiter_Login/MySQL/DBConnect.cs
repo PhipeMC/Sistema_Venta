@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using DB_Regiter_Login.BackEnd;
 
 namespace DB_Regiter_Login.MySQL
 {
@@ -571,5 +572,25 @@ namespace DB_Regiter_Login.MySQL
                 return list;
             }
         }
+        public void insertProductos(Producto p)
+        {
+            //Conexion con = new Conexion();
+
+            String SQL = "INSERT INTO universidades (precio, nombre, descripcion, stock, idCategoria,idProveedor)" +
+                "VALUES (@precio, @nombre, @descripcion, @stock, @idCategoria, @idProveedor);";
+
+            MySqlCommand sqlCom = new MySqlCommand();
+            sqlCom.CommandText = SQL;
+            sqlCom.Parameters.AddWithValue("@precio", p.precio);
+            sqlCom.Parameters.AddWithValue("@nombre", p.nombre);
+            sqlCom.Parameters.AddWithValue("@descripcion", p.descripcion);
+            sqlCom.Parameters.AddWithValue("@stock", p.stock);
+            sqlCom.Parameters.AddWithValue("@idCategoria",p.idCategoria);
+            sqlCom.Parameters.AddWithValue("@idProveedor",p.idProveedor);
+            //con.EjecutaSQLComando(sqlCom);
+        }
+
+
+
     }
 }
