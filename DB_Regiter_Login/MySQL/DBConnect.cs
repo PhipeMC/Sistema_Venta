@@ -710,34 +710,41 @@ namespace DB_Regiter_Login.MySQL
 
         public int get_Last_ID_Client()
         {
-            string query = "select idcliente from clientes order by idcliente desc; ";
-
-            //Create a list to store the result
-            List<string> list = new List<string>();
-
-            //Open connection
-            if (this.OpenConnection() == true)
+            try
             {
-                //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
+                string query = "select idcliente from clientes order by idcliente desc; ";
 
-                //Read the data and store them in the list
-                while (dataReader.Read())
+                //Create a list to store the result
+                List<string> list = new List<string>();
+
+                //Open connection
+                if (this.OpenConnection() == true)
                 {
-                    list.Add(dataReader["idCliente"] + "");
+                    //Create Command
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    //Read the data and store them in the list
+                    while (dataReader.Read())
+                    {
+                        list.Add(dataReader["idCliente"] + "");
+                    }
+
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+
+                    //return list to be displayed
                 }
-
-                //close Data Reader
-                dataReader.Close();
-
-                //close Connection
-                this.CloseConnection();
-
-                //return list to be displayed
+                return Convert.ToInt32(list[0]) + 1;
             }
-            return Convert.ToInt32(list[0])+1;
+            catch (Exception ex) {
+                ex.ToString();
+                return 1;
+            }
         }
 
         public List<string>[] SelectClientes(String ID)
