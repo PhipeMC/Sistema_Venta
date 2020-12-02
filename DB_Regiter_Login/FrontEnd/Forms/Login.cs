@@ -219,7 +219,8 @@ namespace DB_Regiter_Login
             {
                 if (Connection.Check(txt_nickname.Text, txt_password.Text))
                 {
-                    FrontEnd.Forms.Menu FrmCliente = new FrontEnd.Forms.Menu();
+                    String puesto = Connection.get_Puesto(txt_nickname.Text);
+                    FrontEnd.Forms.Menu FrmCliente = new FrontEnd.Forms.Menu(txt_nickname.Text, puesto);
                     FrmCliente.Visible = true;
                     this.Visible = false;
                 }

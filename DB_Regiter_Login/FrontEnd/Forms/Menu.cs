@@ -12,9 +12,19 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 {
     public partial class Menu : Form
     {
+        private String user;
+        private String puesto;
+
         public Menu()
         {
             InitializeComponent();
+        }
+
+        public Menu(String user, String puesto)
+        {
+            InitializeComponent();
+            this.user = user;
+            this.puesto = puesto;
         }
 
         private void btnCajero_Click(object sender, EventArgs e)
