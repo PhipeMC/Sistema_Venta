@@ -60,12 +60,16 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.tbProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tbAgregar.SuspendLayout();
             this.tbModificar.SuspendLayout();
+            this.tbEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbProductos
@@ -84,7 +88,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(467, 321);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 317);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -105,7 +109,7 @@
             this.tabControl2.Location = new System.Drawing.Point(508, 12);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(280, 346);
+            this.tabControl2.Size = new System.Drawing.Size(280, 351);
             this.tabControl2.TabIndex = 1;
             // 
             // tbAgregar
@@ -126,13 +130,14 @@
             this.tbAgregar.Location = new System.Drawing.Point(4, 22);
             this.tbAgregar.Name = "tbAgregar";
             this.tbAgregar.Padding = new System.Windows.Forms.Padding(3);
-            this.tbAgregar.Size = new System.Drawing.Size(272, 320);
+            this.tbAgregar.Size = new System.Drawing.Size(272, 325);
             this.tbAgregar.TabIndex = 0;
             this.tbAgregar.Text = "Agregar";
             this.tbAgregar.UseVisualStyleBackColor = true;
             // 
             // tbModificar
             // 
+            this.tbModificar.Controls.Add(this.button1);
             this.tbModificar.Controls.Add(this.textBox12);
             this.tbModificar.Controls.Add(this.textBox11);
             this.tbModificar.Controls.Add(this.textBox10);
@@ -148,16 +153,17 @@
             this.tbModificar.Location = new System.Drawing.Point(4, 22);
             this.tbModificar.Name = "tbModificar";
             this.tbModificar.Padding = new System.Windows.Forms.Padding(3);
-            this.tbModificar.Size = new System.Drawing.Size(272, 320);
+            this.tbModificar.Size = new System.Drawing.Size(272, 325);
             this.tbModificar.TabIndex = 1;
             this.tbModificar.Text = "Modificar";
             this.tbModificar.UseVisualStyleBackColor = true;
             // 
             // tbEliminar
             // 
+            this.tbEliminar.Controls.Add(this.button2);
             this.tbEliminar.Location = new System.Drawing.Point(4, 22);
             this.tbEliminar.Name = "tbEliminar";
-            this.tbEliminar.Size = new System.Drawing.Size(272, 289);
+            this.tbEliminar.Size = new System.Drawing.Size(272, 325);
             this.tbEliminar.TabIndex = 2;
             this.tbEliminar.Text = "Eliminar";
             this.tbEliminar.UseVisualStyleBackColor = true;
@@ -325,43 +331,62 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(24, 41);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(97, 20);
+            this.textBox7.Size = new System.Drawing.Size(242, 20);
             this.textBox7.TabIndex = 7;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(24, 80);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(97, 20);
+            this.textBox8.Size = new System.Drawing.Size(242, 20);
             this.textBox8.TabIndex = 8;
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(24, 119);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(97, 20);
+            this.textBox9.Size = new System.Drawing.Size(242, 20);
             this.textBox9.TabIndex = 9;
             // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(24, 158);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(97, 20);
+            this.textBox10.Size = new System.Drawing.Size(242, 20);
             this.textBox10.TabIndex = 10;
             // 
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(24, 197);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(97, 20);
+            this.textBox11.Size = new System.Drawing.Size(242, 20);
             this.textBox11.TabIndex = 11;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(88, 150);
+            this.textBox12.Location = new System.Drawing.Point(24, 236);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(97, 20);
+            this.textBox12.Size = new System.Drawing.Size(242, 20);
             this.textBox12.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(191, 291);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(69, 130);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Eliminar Seleccionado";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Productos
             // 
@@ -372,6 +397,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Productos";
             this.Text = "Productos";
+            this.Load += new System.EventHandler(this.Productos_Load);
             this.tbProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -380,6 +406,7 @@
             this.tbAgregar.PerformLayout();
             this.tbModificar.ResumeLayout(false);
             this.tbModificar.PerformLayout();
+            this.tbEliminar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -418,5 +445,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
