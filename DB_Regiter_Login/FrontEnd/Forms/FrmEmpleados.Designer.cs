@@ -197,6 +197,7 @@
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(152, 20);
             this.txtContra.TabIndex = 5;
+            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
             // 
             // txtUsuario
             // 
@@ -204,6 +205,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(152, 20);
             this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtPuesto
             // 
@@ -219,6 +221,7 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(255, 20);
             this.txtTel.TabIndex = 2;
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             // 
             // txtDireccion
             // 
@@ -227,6 +230,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(255, 20);
             this.txtDireccion.TabIndex = 1;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // txtNombre
             // 
@@ -234,6 +238,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(255, 20);
             this.txtNombre.TabIndex = 0;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // checkDireccion
@@ -400,7 +405,7 @@
             this.tblDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblDatos.Location = new System.Drawing.Point(0, 267);
             this.tblDatos.Name = "tblDatos";
-            this.tblDatos.Size = new System.Drawing.Size(619, 278);
+            this.tblDatos.Size = new System.Drawing.Size(632, 278);
             this.tblDatos.TabIndex = 1;
             this.tblDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblDatos_CellContentClick);
             this.tblDatos.Click += new System.EventHandler(this.tblDatos_Click);
@@ -409,7 +414,7 @@
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(505, 23);
+            this.panel1.Location = new System.Drawing.Point(518, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(114, 46);
             this.panel1.TabIndex = 2;
@@ -446,7 +451,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 545);
+            this.ClientSize = new System.Drawing.Size(634, 545);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tblDatos);

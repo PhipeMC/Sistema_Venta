@@ -476,6 +476,22 @@ namespace DB_Regiter_Login.MySQL
         }
 
 
+        public Boolean insertEmpleado(Empleado empleado)
+        {
+            string query = String.Format("insert into empleados value ({0},'{1}','{2}','{3}','{4}','{5}','{6}');",
+                empleado.idEmpleado, empleado.nombreCompleto, empleado.direccion, empleado.telefono,
+                empleado.usuario, empleado.contrasenia, empleado.puesto);
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+                return true;
+            }
+            return false;
+        }
+
+
         public Empleado SelectEmpleado(String ID)
         {
             string query = String.Format("SELECT * FROM EMPLEADOS WHERE idEmpleado='{0}'", ID);

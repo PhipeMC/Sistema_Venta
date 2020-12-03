@@ -78,6 +78,63 @@ namespace DB_Regiter_Login.Forms
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            string idEmpleado = "default";
+            string nombre = txtNombre.Text;
+            string direccion;
+            string telefono;
+            string puesto;
+            string usuario = txtUsuario.Text;
+            string contra = txtContra.Text;
+            
+            if (txtPuesto.Text.Equals("Admin"))
+            {
+                puesto = txtPuesto.Text;
+            }else if (txtPuesto.Text.Equals("chalan"))
+            {
+                puesto = txtPuesto.Text;
+            }else if (txtPuesto.Text.Equals("cajero"))
+            {
+                puesto = "cajero";
+            }
+            else
+            {
+                MessageBox.Show("error, puesto incorrecto");
+                return;
+            }
+            
+            if (checkDireccion.Checked)
+            {
+                direccion = txtDireccion.Text;
+            }
+            else
+            {
+                direccion = "null";
+            }
+            if (checkTel.Checked)
+            {
+                telefono = txtTel.Text;
+            }
+            else
+            {
+                telefono = "null";
+            }
+            Empleado empleado = new Empleado();
+            empleado.idEmpleado = idEmpleado;
+            empleado.nombreCompleto = nombre;
+            empleado.direccion = direccion;
+            empleado.telefono = telefono;
+            empleado.usuario = usuario;
+            empleado.contrasenia = contra;
+            empleado.puesto = puesto;
+            try
+            {
+                conexion.insertEmpleado(empleado);
+                fill_Table();
+                MessageBox.Show("empleado agregado");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -155,6 +212,59 @@ namespace DB_Regiter_Login.Forms
         private void tblDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text.Length > 45)
+            {
+                MessageBox.Show("el tamaño máximo de nombre se ha rebasado");
+                txtNombre.Text=txtNombre.Text.Substring(0, 45);
+            }
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text.Length > 45)
+            {
+                MessageBox.Show("el tamaño máximo de la dirección se ha rebasado");
+                txtDireccion.Text = txtDireccion.Text.Substring(0, 45);
+            }
+        }
+
+        private void txtTel_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                long num =long.Parse(txtTel.Text);
+                if (txtTel.Text.Length > 10)
+                {
+                    MessageBox.Show("logitud de teléfono máxima de 10");
+                    txtTel.Text = txtTel.Text.Substring(0, 10);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("solo se aceptan números enteros");
+            }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Length > 20)
+            {
+                MessageBox.Show("usuario máximo de 20 carácteres");
+                txtUsuario.Text = txtUsuario.Text.Substring(0, 20);
+            }
+        }
+
+        private void txtContra_TextChanged(object sender, EventArgs e)
+        {
+            if (txtContra.Text.Length > 15)
+            {
+                txtContra.Text="";
+                MessageBox.Show("límite excedido en tamaño de contraseña");
+            }
         }
     }
 }
