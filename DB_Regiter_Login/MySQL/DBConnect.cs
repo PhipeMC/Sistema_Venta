@@ -564,6 +564,7 @@ namespace DB_Regiter_Login.MySQL
         /// </returns>
         public List<string>[] SelectProveedores()
         {
+
             string query = "SELECT * FROM proveedores";
 
             //Create a list to store the result
@@ -602,6 +603,123 @@ namespace DB_Regiter_Login.MySQL
             else
             {
                 return list;
+            }
+        }
+
+        /// <summary>
+        /// Consulta para obtener los proveedores de la BD
+        /// </summary>
+        /// <returns>
+        /// Regresa un Array de List<String> donde cada lista es una columna de la tabla 
+        /// en la base de datos
+        /// </returns>
+        public List<string>[] SelectProveedores(string id)
+        {
+
+            string query = String.Format("Select * from proveedores where idProveedor={0}", id);
+
+            //Create a list to store the result
+            List<string>[] list = new List<string>[4];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["idProveedor"] + "");
+                    list[1].Add(dataReader["nombreCompleto"] + "");
+                    list[2].Add(dataReader["direccion"] + "");
+                    list[3].Add(dataReader["telefono"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
+        /// <summary>
+        /// Consulta para añadir los proveedores de la BD
+        /// </summary>
+        public void insertProveedores(String nombreCompleto, String direccion, String telefono)
+        {
+            //Añadir un nuevo proveedor en la base de datos
+            string query = String.Format("insert into proveedores values(null,'{0}','{1}','{2}')", nombreCompleto, direccion, telefono);
+            //string query = String.Format("insert into `ventas` values (null,'{0}','{1}','{2}');", fecha, empleado, cliente);
+
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+
+        /// <summary>
+        /// Consulta para actualizar los proveedores de la BD
+        /// </summary>
+        public void updateProveedores(int idProveedor, String nombreCompleto, String direccion, String telefono)
+        {
+            //Añadir un nuevo proveedor en la base de datos
+            string query = String.Format("update proveedores set nombreCompleto='{0}', direccion='{1}', telefono='{2}' where idProveedor={3}", nombreCompleto, direccion, telefono, idProveedor);
+
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+
+        /// <summary>
+        /// Consulta para eliminar un proveedor especifico de la BD
+        /// </summary>
+        public void deleteProveedores(int idProveedor)
+        {
+            //Añadir un nuevo proveedor en la base de datos
+            string query = String.Format("delete from proveedores where idProveedor={0} limit 1", idProveedor);
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
             }
         }
 
