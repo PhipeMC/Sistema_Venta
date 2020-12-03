@@ -16,7 +16,6 @@ namespace DB_Regiter_Login.FrontEnd.Forms
         private String user;
         private String puesto;
         public Form1 login;
-
         public Menu()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            Admin admin = new Admin(this.user,this.puesto,this.login);
             this.Visible = false;
             admin.Visible = true;
         }
@@ -58,12 +57,12 @@ namespace DB_Regiter_Login.FrontEnd.Forms
             sound_login();
             lbl_user.Text = String.Format("Bienvenido {0}",user);
             panel2.Location = new Point((this.Width / 2)-panel2.Width/2,panel2.Location.Y);
-            if (!this.puesto.Equals("admin"))
+            if (this.puesto!="admin")
             {
-                btnAdmin.Visible = false;
+                btnAdmin.Enabled = false;
             }
             else {
-                btnAdmin.Visible = true;
+                btnAdmin.Enabled = true;
             }
         }
 

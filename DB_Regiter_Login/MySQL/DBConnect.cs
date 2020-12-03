@@ -27,15 +27,15 @@ namespace DB_Regiter_Login.MySQL
         private void Initialize()
         {
             server = "localhost";
-            //port = "3307";
+            port = "3307";
             database = "tiendita";
             uid = "root";
             password = "root";
             /*string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";*/
-            //connection = new MySqlConnection(String.Format("SERVER={0};PORT={1};DATABASE={2};UID={3};PASSWORD={4}", server, port, database, uid, password));
-            connection = new MySqlConnection(String.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3}", server, database, uid, password));
+            connection = new MySqlConnection(String.Format("SERVER={0};PORT={1};DATABASE={2};UID={3};PASSWORD={4}", server, port, database, uid, password));
+            //connection = new MySqlConnection(String.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3}", server, database, uid, password));
         }
 
         //open connection to database
