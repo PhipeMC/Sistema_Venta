@@ -155,3 +155,4 @@ C:\Users\user\Desktop\proyecto repo\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_
 C:\Users\user\Desktop\proyecto repo\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CopyComplete
 C:\Users\user\Desktop\proyecto repo\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
 C:\Users\user\Desktop\proyecto repo\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
+E:\Final\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csprojAssemblyReference.cache
