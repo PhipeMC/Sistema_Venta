@@ -1,4 +1,5 @@
-﻿using DB_Regiter_Login.Properties;
+﻿using DB_Regiter_Login.MySQL;
+using DB_Regiter_Login.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 {
     public partial class Menu : Form
     {
+        private static DBConnect Connection = new DBConnect();
         private String user;
         private String puesto;
         public Form1 login;
@@ -56,15 +58,8 @@ namespace DB_Regiter_Login.FrontEnd.Forms
         private void Menu_Load(object sender, EventArgs e)
         {
             sound_login();
-            lbl_user.Text = String.Format("Bienvenido {0}",user);
+            lbl_user.Text = String.Format("Bienvenido {0}", Connection.get_Nombre(user));
             panel2.Location = new Point((this.Width / 2)-panel2.Width/2,panel2.Location.Y);
-            if (!this.puesto.Equals("admin"))
-            {
-                btnAdmin.Visible = false;
-            }
-            else {
-                btnAdmin.Visible = true;
-            }
         }
 
         public void sound_login() {
@@ -87,6 +82,134 @@ namespace DB_Regiter_Login.FrontEnd.Forms
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             pictureBox1.BackColor = Color.FromArgb(240, 240, 240);
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            Venta vent = new Venta(this);
+            this.Visible = false;
+            vent.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Venta vent = new Venta(this);
+            this.Visible = false;
+            vent.Visible = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Venta vent = new Venta(this);
+            this.Visible = false;
+            vent.Visible = true;
+        }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(225, 225, 225);
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(225, 225, 225);
+        }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(225, 225, 225);
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(240, 240, 240);
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(240, 240, 240);
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(240, 240, 240);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                Admin admin = new Admin();
+                this.Visible = false;
+                admin.Visible = true;
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                Admin admin = new Admin();
+                this.Visible = false;
+                admin.Visible = true;
+            }
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                Admin admin = new Admin();
+                this.Visible = false;
+                admin.Visible = true;
+            }
+        }
+
+        private void panel3_MouseEnter(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin")) {
+                panel3.BackColor = Color.FromArgb(225, 225, 225);
+            }
+        }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                panel3.BackColor = Color.FromArgb(225, 225, 225);
+            }
+        }
+
+        private void label2_MouseEnter(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                panel3.BackColor = Color.FromArgb(225, 225, 225);
+            }
+        }
+
+        private void panel3_MouseLeave(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                panel3.BackColor = Color.FromArgb(240, 240, 240);
+            }
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                panel3.BackColor = Color.FromArgb(240, 240, 240);
+            }
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            if (puesto.Equals("admin"))
+            {
+                panel3.BackColor = Color.FromArgb(240, 240, 240);
+            }
         }
     }
 }

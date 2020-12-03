@@ -183,6 +183,16 @@ namespace DB_Regiter_Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap manager_96px {
+            get {
+                object obj = ResourceManager.GetObject("manager_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minus_48px {
             get {
                 object obj = ResourceManager.GetObject("minus_48px", resourceCulture);
@@ -226,6 +236,26 @@ namespace DB_Regiter_Login.Properties {
         internal static System.Drawing.Bitmap shopping_96px {
             get {
                 object obj = ResourceManager.GetObject("shopping_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_gray_48px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_gray_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_gray_96px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_gray_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

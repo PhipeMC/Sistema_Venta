@@ -24,7 +24,6 @@ E:\Final\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Buffers.xml
 E:\Final\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Memory.xml
 E:\Final\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Numerics.Vectors.xml
 E:\Final\Sistema_Venta\DB_Regiter_Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-E:\Final\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csprojAssemblyReference.cache
 E:\Final\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.FrontEnd.Forms.Admin.resources
 E:\Final\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.Cliente.resources
 E:\Final\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.Forms.FrmEmpleados.resources

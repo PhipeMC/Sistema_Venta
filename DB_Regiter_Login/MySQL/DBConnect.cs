@@ -866,5 +866,40 @@ namespace DB_Regiter_Login.MySQL
                 return null;
             }
         }
+
+        public String get_Nombre(String Usuario)
+        {
+            string query = String.Format("Select nombreCompleto from empleados where Usuario='{0}'", Usuario);
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list.Add(dataReader["nombreCompleto"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
