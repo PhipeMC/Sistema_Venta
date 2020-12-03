@@ -834,7 +834,7 @@ namespace DB_Regiter_Login.MySQL
 
         public String get_Puesto(String Usuario)
         {
-            string query = String.Format("Select puesto from clientes where Usuario={0}", Usuario);
+            string query = String.Format("Select puesto from empleados where Usuario='{0}'", Usuario);
 
             //Create a list to store the result
             List<string> list = new List<string>();

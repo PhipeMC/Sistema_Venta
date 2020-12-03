@@ -187,5 +187,20 @@ namespace DB_Regiter_Login.Forms
         {
             panel1.BackColor = Color.FromArgb(169, 160, 160);
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

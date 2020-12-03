@@ -28,28 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCajero = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.lbl_user = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(317, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido";
             // 
             // btnCajero
             // 
             this.btnCajero.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnCajero.Location = new System.Drawing.Point(12, 162);
+            this.btnCajero.Location = new System.Drawing.Point(120, 66);
+            this.btnCajero.Margin = new System.Windows.Forms.Padding(2);
             this.btnCajero.Name = "btnCajero";
-            this.btnCajero.Size = new System.Drawing.Size(174, 62);
+            this.btnCajero.Size = new System.Drawing.Size(150, 150);
             this.btnCajero.TabIndex = 1;
             this.btnCajero.Text = "Cajero";
             this.btnCajero.UseVisualStyleBackColor = true;
@@ -58,9 +53,10 @@
             // btnAdmin
             // 
             this.btnAdmin.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnAdmin.Location = new System.Drawing.Point(283, 162);
+            this.btnAdmin.Location = new System.Drawing.Point(344, 66);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(237, 62);
+            this.btnAdmin.Size = new System.Drawing.Size(150, 150);
             this.btnAdmin.TabIndex = 2;
             this.btnAdmin.Text = "Administrador";
             this.btnAdmin.UseVisualStyleBackColor = true;
@@ -69,35 +65,72 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.Location = new System.Drawing.Point(614, 162);
+            this.btnSalir.Location = new System.Drawing.Point(539, 166);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(174, 62);
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 3;
-            this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // lbl_user
+            // 
+            this.lbl_user.AutoSize = true;
+            this.lbl_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user.Location = new System.Drawing.Point(49, 13);
+            this.lbl_user.Name = "lbl_user";
+            this.lbl_user.Size = new System.Drawing.Size(13, 20);
+            this.lbl_user.TabIndex = 2;
+            this.lbl_user.Text = ".";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.lbl_user);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(181, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(230, 47);
+            this.panel2.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DB_Regiter_Login.Properties.Resources.male_user__gray_48px;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 279);
+            this.ClientSize = new System.Drawing.Size(600, 227);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnCajero);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCajero;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label lbl_user;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

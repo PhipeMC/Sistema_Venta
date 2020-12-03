@@ -76,3 +76,4 @@ C:\Users\nahuel\Desktop\Proyecto\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Reg
 C:\Users\nahuel\Desktop\Proyecto\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.csproj.CopyComplete
 C:\Users\nahuel\Desktop\Proyecto\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.exe
 C:\Users\nahuel\Desktop\Proyecto\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.pdb
+E:\Final\Sistema_Venta\DB_Regiter_Login\obj\Debug\DB_Regiter_Login.FrontEnd.Forms.Producto.resources

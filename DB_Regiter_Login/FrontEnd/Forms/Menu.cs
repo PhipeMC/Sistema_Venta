@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DB_Regiter_Login.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,17 +15,19 @@ namespace DB_Regiter_Login.FrontEnd.Forms
     {
         private String user;
         private String puesto;
+        public Form1 login;
 
         public Menu()
         {
             InitializeComponent();
         }
 
-        public Menu(String user, String puesto)
+        public Menu(String user, String puesto, Form1 frmMain)
         {
             InitializeComponent();
             this.user = user;
             this.puesto = puesto;
+            this.login = frmMain;
         }
 
         private void btnCajero_Click(object sender, EventArgs e)
@@ -43,9 +46,31 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Form1 main = new Form1();
-            this.Visible = false;
-            main.Visible = true;
+            //Form1 main = new Form1();
+            //this.Visible = false;
+            //main.Visible = true;
+
+            this.Close();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            sound_login();
+            lbl_user.Text = String.Format("Bienvenido {0}",user);
+            if (!this.puesto.Equals("admin"))
+            {
+                btnAdmin.Visible = false;
+            }
+            else {
+                btnAdmin.Visible = true;
+            }
+        }
+
+        public void sound_login() {
+            using (var soundPlayer = new System.Media.SoundPlayer(Resources.Vista_MSNMSGR_NewMail))
+            {
+                soundPlayer.Play();
+            }
         }
     }
 }

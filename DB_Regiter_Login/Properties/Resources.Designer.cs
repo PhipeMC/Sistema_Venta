@@ -229,5 +229,14 @@ namespace DB_Regiter_Login.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Vista_MSNMSGR_NewMail {
+            get {
+                return ResourceManager.GetStream("Vista_MSNMSGR_NewMail", resourceCulture);
+            }
+        }
     }
 }
