@@ -13,9 +13,19 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 {
     public partial class Admin : Form
     {
+        private String user;
+        private String puesto;
+        public Form1 login;
         public Admin()
         {
             InitializeComponent();
+        }
+        public Admin(String user, String puesto, Form1 frmMain)
+        {
+            InitializeComponent();
+            this.user = user;
+            this.puesto = puesto;
+            this.login = frmMain;
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -28,7 +38,9 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ingresando..");
+            FrmEmpleados em = new FrmEmpleados();
+            em.Visible = true;
+            this.Visible = false;
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
@@ -38,12 +50,14 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ingresando..");
+            Producto pr = new Producto();
+            pr.Visible = true;
+            this.Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            FrontEnd.Forms.Menu main = new FrontEnd.Forms.Menu();
+            FrontEnd.Forms.Menu main = new FrontEnd.Forms.Menu(this.user, this.puesto, this.login);
             this.Visible = false;
             main.Visible = true;
         }
