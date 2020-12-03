@@ -8,10 +8,10 @@ namespace DB_Regiter_Login.BackEnd
 {
     class Empleado
     {
-        public int idEmpleado { get; set; }
+        public String idEmpleado { get; set; }
         public String nombreCompleto { get; set; }
         public String direccion { get; set; }
-        public int telefono { get; set; }
+        public String telefono { get; set; }
         public String usuario { get; set; }
         public String contrasenia { get; set; }
         public String puesto { get; set; }

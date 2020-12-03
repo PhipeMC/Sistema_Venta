@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DB_Regiter_Login.BackEnd;
 using MySql.Data.MySqlClient;
 
 namespace DB_Regiter_Login.MySQL
@@ -473,6 +474,70 @@ namespace DB_Regiter_Login.MySQL
             }
             return list;
         }
+
+
+        public Empleado SelectEmpleado(String ID)
+        {
+            string query = String.Format("SELECT * FROM EMPLEADOS WHERE idEmpleado='{0}'", ID);
+
+            Empleado empleado = new Empleado();
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader datareader = cmd.ExecuteReader();
+                while (datareader.Read())
+                {
+
+                    empleado.idEmpleado = datareader["idEmpleado"] + "";
+                    empleado.nombreCompleto = datareader["nombreCompleto"] + "";
+                    empleado.direccion = datareader["direccion"] + "";
+                    empleado.telefono = datareader["telefono"] + "";
+                    empleado.usuario = datareader["usuario"] + "";
+                    empleado.contrasenia = datareader["contrasenia"] + "";
+                    empleado.puesto = datareader["puesto"] + "";
+                }
+
+                datareader.Close();
+                this.CloseConnection();
+
+            }
+            return empleado;
+        }
+        /// <summary>
+        /// falta documentar
+        /// </summary>
+        /// <returns>
+        /// 
+        /// </returns>
+        public List<Empleado> SelectEmpleados()
+        {
+            string query = "SELECT * FROM empleados";
+            List<Empleado> list = new List<Empleado>();
+
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader datareader = cmd.ExecuteReader();
+                while (datareader.Read())
+                {
+                    Empleado empleado = new Empleado();
+                    empleado.idEmpleado = datareader["idEmpleado"] + "";
+                    empleado.nombreCompleto = datareader["nombreCompleto"] + "";
+                    empleado.direccion = datareader["direccion"] + "";
+                    empleado.telefono = datareader["telefono"] + "";
+                    empleado.usuario = datareader["usuario"] + "";
+                    empleado.contrasenia = datareader["contrasenia"] + "";
+                    empleado.puesto = datareader["puesto"] + "";
+                    list.Add(empleado);
+                }
+
+                datareader.Close();
+                this.CloseConnection();
+
+            }
+            return list;
+        }
+
 
         /// <summary>
         /// Consulta para obtener los proveedores de la BD
