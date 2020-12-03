@@ -32,7 +32,7 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnCajero_Click(object sender, EventArgs e)
         {
-            Venta vent = new Venta();
+            Venta vent = new Venta(this);
             this.Visible = false;
             vent.Visible = true;
         }
@@ -57,6 +57,7 @@ namespace DB_Regiter_Login.FrontEnd.Forms
         {
             sound_login();
             lbl_user.Text = String.Format("Bienvenido {0}",user);
+            panel2.Location = new Point((this.Width / 2)-panel2.Width/2,panel2.Location.Y);
             if (!this.puesto.Equals("admin"))
             {
                 btnAdmin.Visible = false;
@@ -75,7 +76,17 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            login.Close();
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(169, 160, 160);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(240, 240, 240);
         }
     }
 }

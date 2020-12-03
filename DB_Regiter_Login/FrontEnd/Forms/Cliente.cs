@@ -53,7 +53,6 @@ namespace DB_Regiter_Login.Forms
         {
             fill_Table();
             txt_ID.Text = Connection.get_Last_ID_Client().ToString();
-            lbl_user.Text = String.Format("Bienvenido ");
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
