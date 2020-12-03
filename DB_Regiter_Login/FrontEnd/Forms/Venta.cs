@@ -16,10 +16,18 @@ namespace DB_Regiter_Login.FrontEnd.Forms
         private static MySQL.DBConnect Connection = new MySQL.DBConnect();
         bool press = false;
         string res = "";
+        private Menu Frm_Menu;
         public Venta()
         {
             InitializeComponent();
         }
+
+        public Venta(Menu menu_frame)
+        {
+            InitializeComponent();
+            this.Frm_Menu = menu_frame;
+        }
+
         private bool ValidarVenta()
         {
             bool ok = true;
@@ -103,9 +111,10 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            FrontEnd.Forms.Menu main = new Menu();
             this.Visible = false;
-            main.Visible = true;
+            Frm_Menu.Visible = true;
+            this.Close();
+            
         }
 
         private void btnCrearVenta_Click(object sender, EventArgs e)

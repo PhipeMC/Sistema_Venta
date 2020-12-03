@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DB_Regiter_Login.BackEnd;
 using MySql.Data.MySqlClient;
 
 namespace DB_Regiter_Login.MySQL
@@ -473,6 +474,86 @@ namespace DB_Regiter_Login.MySQL
             }
             return list;
         }
+
+
+        public Boolean insertEmpleado(Empleado empleado)
+        {
+            string query = String.Format("insert into empleados value ({0},'{1}','{2}','{3}','{4}','{5}','{6}');",
+                empleado.idEmpleado, empleado.nombreCompleto, empleado.direccion, empleado.telefono,
+                empleado.usuario, empleado.contrasenia, empleado.puesto);
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+                return true;
+            }
+            return false;
+        }
+
+
+        public Empleado SelectEmpleado(String ID)
+        {
+            string query = String.Format("SELECT * FROM EMPLEADOS WHERE idEmpleado='{0}'", ID);
+
+            Empleado empleado = new Empleado();
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader datareader = cmd.ExecuteReader();
+                while (datareader.Read())
+                {
+
+                    empleado.idEmpleado = datareader["idEmpleado"] + "";
+                    empleado.nombreCompleto = datareader["nombreCompleto"] + "";
+                    empleado.direccion = datareader["direccion"] + "";
+                    empleado.telefono = datareader["telefono"] + "";
+                    empleado.usuario = datareader["usuario"] + "";
+                    empleado.contrasenia = datareader["contrasenia"] + "";
+                    empleado.puesto = datareader["puesto"] + "";
+                }
+
+                datareader.Close();
+                this.CloseConnection();
+
+            }
+            return empleado;
+        }
+        /// <summary>
+        /// falta documentar
+        /// </summary>
+        /// <returns>
+        /// 
+        /// </returns>
+        public List<Empleado> SelectEmpleados()
+        {
+            string query = "SELECT * FROM empleados";
+            List<Empleado> list = new List<Empleado>();
+
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader datareader = cmd.ExecuteReader();
+                while (datareader.Read())
+                {
+                    Empleado empleado = new Empleado();
+                    empleado.idEmpleado = datareader["idEmpleado"] + "";
+                    empleado.nombreCompleto = datareader["nombreCompleto"] + "";
+                    empleado.direccion = datareader["direccion"] + "";
+                    empleado.telefono = datareader["telefono"] + "";
+                    empleado.usuario = datareader["usuario"] + "";
+                    empleado.contrasenia = datareader["contrasenia"] + "";
+                    empleado.puesto = datareader["puesto"] + "";
+                    list.Add(empleado);
+                }
+
+                datareader.Close();
+                this.CloseConnection();
+
+            }
+            return list;
+        }
+
 
         /// <summary>
         /// Consulta para obtener los proveedores de la BD
@@ -947,6 +1028,76 @@ namespace DB_Regiter_Login.MySQL
 
                 //close connection
                 this.CloseConnection();
+            }
+        }
+
+        public String get_Puesto(String Usuario)
+        {
+            string query = String.Format("Select puesto from empleados where Usuario='{0}'", Usuario);
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list.Add(dataReader["puesto"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public String get_Nombre(String Usuario)
+        {
+            string query = String.Format("Select nombreCompleto from empleados where Usuario='{0}'", Usuario);
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list.Add(dataReader["nombreCompleto"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list[0];
+            }
+            else
+            {
+                return null;
             }
         }
     }

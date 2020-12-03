@@ -121,6 +121,16 @@ namespace DB_Regiter_Login.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_48px {
+            get {
+                object obj = ResourceManager.GetObject("exit_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon icons8_chat {
@@ -166,6 +176,16 @@ namespace DB_Regiter_Login.Properties {
         internal static System.Drawing.Bitmap male_user_48px_selected {
             get {
                 object obj = ResourceManager.GetObject("male_user_48px_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manager_96px {
+            get {
+                object obj = ResourceManager.GetObject("manager_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,10 +243,39 @@ namespace DB_Regiter_Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shopping_gray_48px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_gray_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_gray_96px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_gray_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_96px {
             get {
                 object obj = ResourceManager.GetObject("user_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Vista_MSNMSGR_NewMail {
+            get {
+                return ResourceManager.GetStream("Vista_MSNMSGR_NewMail", resourceCulture);
             }
         }
     }

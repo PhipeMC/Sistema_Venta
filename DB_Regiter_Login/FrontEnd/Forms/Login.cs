@@ -94,41 +94,6 @@ namespace DB_Regiter_Login
             Check_Login();
         }
 
-        /// <summary>
-        /// Codigo para el registro
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        /*private void button2_Click(object sender, EventArgs e)
-        {
-            if (!this.register)
-            {
-                showControls(true);
-                this.register = true;
-            }
-            else
-            {
-                if (!txt_nickname.Text.Equals("") && !txt_password.Text.Equals("") && !txt_email.Text.Equals(""))
-                {
-                    try
-                    {
-                        if (Connection.checkRegister(txt_nickname.Text, txt_password.Text, txt_email.Text))
-                        {
-                            Connection.Insert(Connection.Count(), txt_nickname.Text, txt_password.Text, txt_email.Text);
-                            MessageBox.Show("Has sido registrado correctamente");
-                            cleanRegister();
-                        }
-                    }
-                    catch (SystemException) {
-                        MessageBox.Show("Usuario ya se encuentra registrado", "Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    catch (Exception) {
-                        MessageBox.Show("Error al registrar el usuario");
-                    }
-                }
-            }
-        }*/
-
         private void txt_nickname_Enter(object sender, EventArgs e)
         {
             if (txt_nickname.Text.Equals("Nickname"))
@@ -219,7 +184,8 @@ namespace DB_Regiter_Login
             {
                 if (Connection.Check(txt_nickname.Text, txt_password.Text))
                 {
-                    FrontEnd.Forms.Menu FrmCliente = new FrontEnd.Forms.Menu();
+                    String puesto = Connection.get_Puesto(txt_nickname.Text);
+                    FrontEnd.Forms.Menu FrmCliente = new FrontEnd.Forms.Menu(txt_nickname.Text, puesto,this);
                     FrmCliente.Visible = true;
                     this.Visible = false;
                 }

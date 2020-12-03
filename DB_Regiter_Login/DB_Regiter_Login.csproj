@@ -136,7 +136,7 @@
     <Compile Include="FrontEnd\Forms\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\Forms\FrmEmpleados.Designer.cs">
+    <Compile Include="FrontEnd\Forms\FrmEmpleados.designer.cs">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Forms\Login.cs">
@@ -152,11 +152,19 @@
     <Compile Include="FrontEnd\Forms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="FrontEnd\Forms\Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrontEnd\Forms\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
+=======
+    <Compile Include="FrontEnd\Forms\Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Forms\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+>>>>>>> 797e31edd152572a8199a398fe34b32127eba3ba
     </Compile>
     <Compile Include="FrontEnd\Forms\Venta.cs">
       <SubType>Form</SubType>
@@ -182,8 +190,13 @@
     <EmbeddedResource Include="FrontEnd\Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="FrontEnd\Forms\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FrontEnd\Forms\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+>>>>>>> 797e31edd152572a8199a398fe34b32127eba3ba
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Forms\Venta.resx">
       <DependentUpon>Venta.cs</DependentUpon>
@@ -220,6 +233,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_workspace.ico" />
+    <None Include="Resources\manager_96px.png" />
+    <None Include="Resources\shopping_gray_96px.png" />
+    <None Include="Resources\shopping_gray_48px.png" />
+    <None Include="Resources\exit_48px.png" />
+    <None Include="Resources\Vista_MSNMSGR_NewMail.wav" />
     <None Include="Resources\male_user__gray_48px.png" />
     <None Include="Resources\back_48px.png" />
     <None Include="Resources\shopping_96px.png" />
