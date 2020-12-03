@@ -220,6 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_workspace.ico" />
+    <None Include="Resources\exit_48px.png" />
     <None Include="Resources\Vista_MSNMSGR_NewMail.wav" />
     <None Include="Resources\male_user__gray_48px.png" />
     <None Include="Resources\back_48px.png" />

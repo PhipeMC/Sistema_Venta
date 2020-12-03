@@ -72,5 +72,10 @@ namespace DB_Regiter_Login.FrontEnd.Forms
                 soundPlayer.Play();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
