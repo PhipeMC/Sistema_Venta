@@ -11,6 +11,6 @@ namespace DB_Regiter_Login.BackEnd
         public int idProveedor { get; set; }
         public String nombreCompleto { get; set; }
         public String direccion { get; set; }
-        public int telefono { get; set; }
+        public String telefono { get; set; }
     }
 }

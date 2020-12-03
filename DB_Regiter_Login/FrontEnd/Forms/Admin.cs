@@ -33,7 +33,10 @@ namespace DB_Regiter_Login.FrontEnd.Forms
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
+            Proveedores p = new Proveedores();
             MessageBox.Show("Ingresando..");
+            p.Visible = true;
+            this.Visible = false;
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
